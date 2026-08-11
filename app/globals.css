@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #313169;
+  --color-secondary: #B7B7DF;
+  --color-light: #F1F1F9;
+  --color-background: #FFFFFF;
+  --font-poppins: "Poppins", sans-serif;
+}
+
+@theme inline {
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-light: var(--color-light);
+  --color-background: var(--color-background);
+  --font-sans: var(--font-poppins);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+}
+
+@layer components {
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+  }
+}
