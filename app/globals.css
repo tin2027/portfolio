@@ -16,8 +16,12 @@
   --font-sans: var(--font-poppins);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--color-background);
+  background: var(--color-light);
   color: var(--color-primary);
   font-family: var(--font-sans);
 }
@@ -36,6 +40,14 @@ body {
 
   .btn-primary:hover {
     background-color: var(--color-secondary);
+    color: var(--color-primary);
+  }
+
+  .title {
+    margin-bottom: 3rem;
+    font-size: 5.5rem;
+    font-weight: 700;
+    text-align: center;
     color: var(--color-primary);
   }
 }

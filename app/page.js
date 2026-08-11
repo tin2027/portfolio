@@ -1,9 +1,14 @@
 import Image from "next/image";
+import Hero from "../components/Hero";
+import About from "../components/About";
+import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
-    <div className="p-10">
-      <button className="btn-primary">Contact me</button>
-    </div>
+    <main>
+      <Hero />
+      <About />
+      <Skills />
+    </main>
   );
 }
