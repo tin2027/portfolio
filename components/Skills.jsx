@@ -10,12 +10,12 @@ const skills = [
     items: ["Python", "Django", "REST APIs", "Node.js"],
   },
   {
-    name: "Tools & DBs",
+    name: "Tools & DataBases",
     items: ["Git", "GitHub", "PostgreSQL", "MongoDB", "Figma", "Postman"],
   },
   {
     name: "Languages",
-    items: ["Java", "C", "Pascal"],
+    items: ["Java", "C"],
   },
 ];
 export default function Skills() {
