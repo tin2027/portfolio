@@ -3,7 +3,8 @@
 :root {
   --color-primary: #74463A;
   --color-secondary: #C6AE99;
-  --color-light: #F1F1F9;
+  --color-light: #C6AE99;
+  /* --color-light: #F1F1F9; */
   --color-background: #FFFFFF;
   --font-poppins: "Poppins", sans-serif;
 }
