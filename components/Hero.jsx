@@ -29,8 +29,8 @@ export default function Hero() {
         <Image
           src="/me.png"
           alt="Profile Picture"
-          width={1000}
-          height={1000}
+          width={500}
+          height={500}
           className="rounded-full object-cover"
         />
       </div>
