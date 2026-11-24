@@ -27,7 +27,7 @@ export default function Hero() {
       </div>
       <div>
         <Image
-          src="/hero.webp"
+          src="/me.png"
           alt="Profile Picture"
           width={1000}
           height={1000}
