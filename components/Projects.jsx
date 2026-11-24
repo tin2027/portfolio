@@ -28,7 +28,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="w-full flex flex-col gap-10 px-6 md:px-50 py-10 md:py-30 mt-15"
+      className="w-full flex flex-col gap-10 px-6 md:px-50 py-5 md:py-10 mt-15"
     >
       <div>
         <h2 className="title">My Projects</h2>

@@ -3,7 +3,6 @@
 :root {
   --color-primary: #74463A;
   --color-secondary: #C6AE99;
-  /* --color-light: #F1F1F9; */
   --color-light: #f8ede3;
   --color-background: #FFFFFF;
   --font-poppins: "Poppins", sans-serif;
@@ -50,5 +49,23 @@ body {
     font-weight: 700;
     text-align: center;
     color: var(--color-primary);
+  }
+}
+
+.marquee {
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.marquee-track {
+  animation: marquee 30s linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
   }
 }

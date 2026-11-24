@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="w-full flex justify-between gap-10 px-6 md:px-50 py-10 md:py-30 mt-15 md:flex-row flex-col items-center"
+      className="w-full flex justify-between gap-10 px-6 md:px-50 py-0 md:py-0 mt-15 md:flex-row flex-col items-center"
     >
       <div className="flex flex-col justify-center gap-7">
         <h1 className="text-6xl font-bold text-primary md:text-left text-center">
