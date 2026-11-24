@@ -38,7 +38,7 @@ export default function ProjectCard({ project }) {
             <h3 className="text-lg font-semibold text-light">
               {project.title}
             </h3>
-            <span className="rounded-full border border-light/40 p-2 text-light transition-colors group-hover:border-secondary group-hover:bg-secondary group-hover:text-primary">
+            <span className="rounded-full border border-light/40 p-2 text-light transition-colors group-hover:border-pink group-hover:bg-pink group-hover:text-light">
               <ArrowUpRight size={18} />
             </span>
           </div>
@@ -80,11 +80,11 @@ export default function ProjectCard({ project }) {
             <div className="flex flex-col gap-3 p-6">
               <h3
                 id={`project-title-${project.title}`}
-                className="text-2xl font-bold text-primary"
+                className="text-2xl font-bold text-light"
               >
                 {project.title}
               </h3>
-              <p className="text-sm leading-relaxed text-gray-600">
+              <p className="text-sm leading-relaxed text-slate-600">
                 {project.description}
               </p>
 

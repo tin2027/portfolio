@@ -14,29 +14,29 @@ export default function About() {
             className="mx-auto hidden aspect-square w-full max-w-xs rounded-3xl object-cover md:block"
           />
           <div className="grid gap-4 sm:grid-cols-2">
-            <article className="rounded-2xl border border-primary/10 bg-white/70 p-5">
-              <h3 className="mb-2 font-semibold text-primary">Education</h3>
-              <p className="text-sm leading-relaxed text-gray-600">
+            <article className="rounded-2xl border border-white/60 bg-slate-100 p-5 shadow-sm">
+              <h3 className="mb-2 font-semibold text-slate-900">Education</h3>
+              <p className="text-sm leading-relaxed text-slate-700">
                 I&apos;m a third-year student at the Higher National School of
                 Computer Science (ESI) in Algiers, building a strong foundation
                 in computer science.
               </p>
             </article>
-            <article className="rounded-2xl border border-primary/10 bg-white/70 p-5">
-              <h3 className="mb-2 font-semibold text-primary">
+            <article className="rounded-2xl border border-white/60 bg-slate-100 p-5 shadow-sm">
+              <h3 className="mb-2 font-semibold text-slate-900">
                 Full-Stack Development
               </h3>
-              <p className="text-sm leading-relaxed text-gray-600">
+              <p className="text-sm leading-relaxed text-slate-700">
                 I enjoy building complete, user-friendly applications across
                 the frontend and backend, using tools such as React, Next.js,
                 and Django.
               </p>
             </article>
-            <article className="rounded-2xl border border-primary/10 bg-white/70 p-5 sm:col-span-2">
-              <h3 className="mb-2 font-semibold text-primary">
+            <article className="rounded-2xl border border-white/60 bg-slate-100 p-5 shadow-sm sm:col-span-2">
+              <h3 className="mb-2 font-semibold text-slate-900">
                 Interests &amp; Goals
               </h3>
-              <p className="text-sm leading-relaxed text-gray-600">
+              <p className="text-sm leading-relaxed text-slate-700">
                 I love turning ideas into practical solutions and learning
                 through real projects. I&apos;m open to internships,
                 collaborations, and freelance opportunities.

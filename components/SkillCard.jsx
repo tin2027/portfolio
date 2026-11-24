@@ -9,7 +9,7 @@ export default function SkillCard({ name, img, index = 0 }) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: (index % 3) * 0.06, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="flex items-center gap-4 rounded-xl border border-neutral-500/20 bg-(--color-background) p-3 shadow-sm transition-transform hover:-translate-y-1"
+      className="flex items-center gap-4 rounded-xl border border-white/60 bg-slate-100 p-3 text-slate-800 shadow-sm transition-transform hover:-translate-y-1"
     >
       <Image
         src={img}

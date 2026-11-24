@@ -22,7 +22,7 @@ export default function Nav() {
             <a
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="hover:text-secondary transition-colors"
+              className="transition-colors hover:text-pink"
             >
               {link.name}
             </a>
@@ -33,7 +33,7 @@ export default function Nav() {
       {/* Hamburger button (mobile only, hidden once menu is open) */}
       {!isOpen && (
         <button
-          className="z-10 text-primary text-xl"
+          className="z-10 text-primary text-xl md:hidden"
           onClick={() => setIsOpen(true)}
           aria-label="Open menu"
         >
@@ -43,6 +43,8 @@ export default function Nav() {
 
       {/* Mobile dropdown box */}
       <div
+        aria-hidden={!isOpen}
+        inert={!isOpen}
         className={`absolute right-4 top-full w-48 overflow-hidden rounded-xl bg-light shadow-md transition-all duration-300 ease-in-out md:hidden ${
           isOpen ? "max-h-96 " : "max-h-0 "
         }`}
@@ -64,7 +66,7 @@ export default function Nav() {
               <a
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-primary font-semibold text-sm hover:text-secondary transition-colors"
+                className="text-primary font-semibold text-sm transition-colors hover:text-pink"
               >
                 {link.name}
               </a>
