@@ -1,5 +1,3 @@
-"use client";
-import Image from "next/image";
 import ProjectCard from "./ProjectCard";
 
 const projects = [
@@ -8,35 +6,32 @@ const projects = [
     title: "Kunuz",
     link: "https://kunuz.com",
     description:
-      "A social media platform dedicated to passionates about algerian heritage and culture, where they can share their experiences, stories, and knowledge with others.A social media platform dedicated to passionates about algerian heritage and culture, where they can share their experiences, stories, and knowledge with others.A social media platform dedicated to passionates about algerian heritage and culture, where they can share their experiences, stories, and knowledge with others.A social media platform dedicated to passionates about algerian heritage and culture, where they can share their experiences, stories, and knowledge with others.A social media platform dedicated to passionates about algerian heritage and culture, where they can share their experiences, stories, and knowledge with others.",
+      "A community platform for sharing stories and knowledge about Algerian heritage and culture.",
   },
   {
     image: "promptopia.png",
     title: "Promptopia",
     link: "https://promptopia-opti.vercel.app/",
     description:
-      "Promptopia is a full-stack, open-source web app where users can discover, create, and share AI-powered prompts. Built with Next.js, it features Google authentication, a searchable prompt feed (by tag or username), and a simple one-click copy feature so users can quickly grab prompts to use in tools like ChatGPT or other AI models. Each user has a profile showcasing the prompts they've shared with the community, and they have the ability to edit or delete them. The app is designed to be responsive and user-friendly, making it easy for users to engage with the content and contribute their own prompts.",
+      "A full-stack app for discovering, creating, and sharing AI prompts, with Google sign-in and searchable profiles.",
   },
   {
     image: "hidaya.jpeg",
     title: "Hidaya store",
     description:
-      "A social media platform dedicated to passionates about algerian heritage and culture, where they can share their experiences, stories, and knowledge with others.",
+      "An online storefront designed to make browsing and discovering products simple.",
   },
 ];
 export default function Projects() {
   return (
-    <section
-      id="projects"
-      className="w-full flex flex-col gap-10 px-6 md:px-50 py-5 md:py-10 mt-15"
-    >
-      <div>
+    <section id="projects" className="section-shell">
+      <div className="section-content">
         <h2 className="title">My Projects</h2>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((project) => (
-          <ProjectCard key={project.title} project={project} />
-        ))}
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -21,22 +21,12 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section
-      id="skills"
-      className="w-full overflow-hidden px-4 md:px-40 py-5 md:py-10 mt-15"
-    >
-      <div className="mb-10 flex items-center justify-center gap-4">
+    <section id="skills" className="section-shell">
+      <div className="section-content">
         <h2 className="title">My Skills</h2>
-      </div>
-      <div className="marquee">
-        <div className="marquee-track flex w-max">
-          {skills.map((s) => (
-            <SkillCard key={s.name} {...s} />
-          ))}
-          {skills.map((s) => (
-            <div key={`dup-${s.name}`} aria-hidden="true">
-              <SkillCard {...s} />
-            </div>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+          {skills.map((skill, index) => (
+            <SkillCard key={skill.name} {...skill} index={index} />
           ))}
         </div>
       </div>

@@ -1,38 +1,47 @@
-"use client";
 import Image from "next/image";
 
 export default function About() {
   return (
-    <section id="about" className="w-full py-10 md:py-30 px-6 md:px-50">
-      <h2 className="title">About Me</h2>
-      <div className="flex gap-15 items-center">
-        <Image
-          src="/about.avif"
-          alt="About Image"
-          width={2000}
-          height={2000}
-          className="rounded-full object-cover hidden md:block"
-        />
-        <div className="flex flex-col gap-7">
-          <p className="text-lg text-gray-600 md:text-left text-center">
-            I'm a passionate developer, a third-year student at the Higher
-            National School of Computer Science (ESI) in Algiers, currently
-            focused on becoming a full-stack developer. I'm building my backend
-            skills with Django and my frontend skills with Next.js, working on
-            projects that help me connect both sides of an application. I enjoy
-            the problem-solving side of coding, turning a messy idea into a
-            structured solution that actually works and is user-friendly. I'm
-            currently looking for opportunities to apply what I'm learning to
-            real projects, whether that's an internship, collaboration, or
-            freelance work.
-          </p>
-          <div className="flex justify-center md:justify-start">
-            <a
-              href="#contact"
-              className="btn-primary w-60 py-3 text-lg font-semibold rounded-4xl hover:bg-secondary transition-colors text-center"
-            >
-              Contact Me
-            </a>
+    <section id="about" className="section-shell">
+      <div className="section-content">
+        <h2 className="title">About Me</h2>
+        <div className="grid items-center gap-8 md:grid-cols-[minmax(0,0.75fr)_minmax(0,1.25fr)]">
+          <Image
+            src="/about.avif"
+            alt="A person working at a computer"
+            width={720}
+            height={720}
+            className="mx-auto hidden aspect-square w-full max-w-xs rounded-3xl object-cover md:block"
+          />
+          <div className="grid gap-4 sm:grid-cols-2">
+            <article className="rounded-2xl border border-primary/10 bg-white/70 p-5">
+              <h3 className="mb-2 font-semibold text-primary">Education</h3>
+              <p className="text-sm leading-relaxed text-gray-600">
+                I&apos;m a third-year student at the Higher National School of
+                Computer Science (ESI) in Algiers, building a strong foundation
+                in computer science.
+              </p>
+            </article>
+            <article className="rounded-2xl border border-primary/10 bg-white/70 p-5">
+              <h3 className="mb-2 font-semibold text-primary">
+                Full-Stack Development
+              </h3>
+              <p className="text-sm leading-relaxed text-gray-600">
+                I enjoy building complete, user-friendly applications across
+                the frontend and backend, using tools such as React, Next.js,
+                and Django.
+              </p>
+            </article>
+            <article className="rounded-2xl border border-primary/10 bg-white/70 p-5 sm:col-span-2">
+              <h3 className="mb-2 font-semibold text-primary">
+                Interests &amp; Goals
+              </h3>
+              <p className="text-sm leading-relaxed text-gray-600">
+                I love turning ideas into practical solutions and learning
+                through real projects. I&apos;m open to internships,
+                collaborations, and freelance opportunities.
+              </p>
+            </article>
           </div>
         </div>
       </div>

@@ -14,13 +14,14 @@ export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full flex items-center justify-end md:justify-center relative py-4 px-6 shadow-sm sticky top-0 z-index-50 bg-light">
+    <nav className="sticky top-0 z-50 flex w-full items-center justify-end bg-light/95 px-6 py-2 shadow-sm backdrop-blur md:justify-center">
       {/* Desktop links */}
-      <ul className="hidden md:flex gap-25 text-primary font-semibold text-xl">
+      <ul className="hidden gap-10 text-primary font-semibold text-sm md:flex">
         {navLinks.map((link) => (
           <li key={link.name}>
             <a
               href={link.href}
+              onClick={() => setIsOpen(false)}
               className="hover:text-secondary transition-colors"
             >
               {link.name}
@@ -32,7 +33,7 @@ export default function Nav() {
       {/* Hamburger button (mobile only, hidden once menu is open) */}
       {!isOpen && (
         <button
-          className="md:hidden text-primary text-2xl z-10"
+          className="z-10 text-primary text-xl"
           onClick={() => setIsOpen(true)}
           aria-label="Open menu"
         >
@@ -42,14 +43,14 @@ export default function Nav() {
 
       {/* Mobile dropdown box */}
       <div
-        className={`absolute top-4 right-6 w-48 bg-light rounded-xl shadow-md md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`absolute right-4 top-full w-48 overflow-hidden rounded-xl bg-light shadow-md transition-all duration-300 ease-in-out md:hidden ${
           isOpen ? "max-h-96 " : "max-h-0 "
         }`}
       >
         {/* Close button inside the box */}
         <div className="flex justify-end px-2 pt-2">
           <button
-            className="text-primary text-2xl"
+            className="text-primary text-xl"
             onClick={() => setIsOpen(false)}
             aria-label="Close menu"
           >
@@ -57,13 +58,13 @@ export default function Nav() {
           </button>
         </div>
 
-        <ul className="flex flex-col items-center gap-6 pb-2 pt-2">
+        <ul className="flex flex-col items-center gap-4 pb-4 pt-2">
           {navLinks.map((link) => (
             <li key={link.name}>
               <a
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-primary font-semibold text-lg hover:text-secondary transition-colors"
+                className="text-primary font-semibold text-sm hover:text-secondary transition-colors"
               >
                 {link.name}
               </a>

@@ -1,37 +1,27 @@
-"use client";
 import Image from "next/image";
-import { useState } from "react";
 
 export default function Hero() {
-  const [isHovered, setIsHovered] = useState(false);
   return (
     <section
       id="hero"
-      className="w-full flex justify-between gap-10 px-6 md:px-50 py-0 md:py-0 mt-15 md:flex-row flex-col items-center"
+      className="section-shell gap-10 md:flex-row"
     >
-      <div className="flex flex-col justify-center gap-7">
-        <h1 className="text-6xl font-bold text-primary md:text-left text-center">
+      <div className="flex max-w-xl flex-col justify-center gap-5">
+        <h1 className="text-4xl font-bold text-primary sm:text-5xl md:text-left md:text-5xl text-center">
           Hi, I am Tinhinane
         </h1>
-        <p className="text-2xl text-gray-600 md:text-left text-center">
+        <p className="text-lg text-gray-600 md:text-left md:text-xl text-center">
           A junior developer who loves building clean functional web apps
         </p>
-        <div className="flex justify-center md:justify-start">
-          <a
-            href="#projects"
-            className="btn-primary w-60 py-3 text-lg font-semibold rounded-4xl hover:bg-secondary transition-colors text-center"
-          >
-            View My Projects
-          </a>
-        </div>
       </div>
-      <div>
+      <div className="w-56 shrink-0 sm:w-64 md:w-72">
         <Image
           src="/me.png"
           alt="Profile Picture"
-          width={500}
-          height={500}
-          className="rounded-full object-cover"
+          width={360}
+          height={360}
+          priority
+          className="h-auto w-full rounded-full object-cover"
         />
       </div>
     </section>

@@ -1,74 +1,99 @@
 "use client";
 
-import { useState } from "react";
-import { ArrowUpRight, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 
 export default function ProjectCard({ project }) {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    if (!isOpen) return;
+
+    function handleKeyDown(event) {
+      if (event.key === "Escape") setIsOpen(false);
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen]);
+
   return (
     <>
-      <div className="rounded-2xl overflow-hidden shadow-sm">
-        <img
-          src={project.image}
+      <button
+        type="button"
+        onClick={() => setIsOpen(true)}
+        aria-label={`View ${project.title} project details`}
+        className="group w-full cursor-pointer overflow-hidden rounded-2xl text-left shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+      >
+        <Image
+          src={`/${project.image}`}
           alt={project.title}
-          className="w-full h-48 object-cover"
+          width={800}
+          height={480}
+          className="h-48 w-full object-cover"
         />
         <div className="flex flex-col gap-2 bg-primary p-4">
           <div className="flex items-center justify-between">
-            <h3 className="text-light font-semibold text-lg">
+            <h3 className="text-lg font-semibold text-light">
               {project.title}
             </h3>
-            <button
-              onClick={() => setIsOpen(true)}
-              aria-label="See project details"
-              className="text-light border border-light/40 rounded-full p-2 hover:bg-secondary hover:text-primary hover:border-secondary transition-colors"
-            >
+            <span className="rounded-full border border-light/40 p-2 text-light transition-colors group-hover:border-secondary group-hover:bg-secondary group-hover:text-primary">
               <ArrowUpRight size={18} />
-            </button>
+            </span>
           </div>
           <p className="text-light/80 text-sm line-clamp-2">
             {project.description}
           </p>
         </div>
-      </div>
+      </button>
 
       {/* Popup / Modal */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-6"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
           onClick={() => setIsOpen(false)}
         >
           <div
-            className="bg-background rounded-2xl max-w-7xl w-full max-h-[85vh] overflow-y-auto overflow-hidden relative flex flex-col md:flex-row"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby={`project-title-${project.title}`}
+            className="relative flex max-h-[85vh] w-full max-w-2xl flex-col overflow-y-auto rounded-2xl bg-background shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setIsOpen(false)}
               aria-label="Close"
-              className="absolute top-3 right-3 bg-light rounded-full w-8 h-8 flex items-center justify-center text-primary hover:bg-secondary transition-colors z-10"
+              className="absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-light text-primary transition-colors hover:bg-secondary"
             >
               ✕
             </button>
 
-            <img
-              src={project.image}
+            <Image
+              src={`/${project.image}`}
               alt={project.title}
-              className="w-full md:w-1/2 h-72 md:h-auto object-cover"
+              width={1000}
+              height={600}
+              className="h-48 w-full object-cover sm:h-56"
             />
 
-            <div className="p-8 flex flex-col gap-4 md:w-1/2">
-              <h3 className="text-primary font-bold text-3xl">
+            <div className="flex flex-col gap-3 p-6">
+              <h3
+                id={`project-title-${project.title}`}
+                className="text-2xl font-bold text-primary"
+              >
                 {project.title}
               </h3>
-              <p className="text-gray-600 text-lg">{project.description}</p>
+              <p className="text-sm leading-relaxed text-gray-600">
+                {project.description}
+              </p>
 
               {project.link && (
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary w-fit mt-2"
+                  className="btn-primary mt-1 w-fit"
                 >
                   Visit Project
                 </a>
