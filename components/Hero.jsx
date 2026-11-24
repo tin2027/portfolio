@@ -2,10 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section
-      id="hero"
-      className="section-shell gap-10 md:flex-row"
-    >
+    <section id="hero" className="section-shell gap-10 md:flex-row">
       <div className="flex max-w-2xl flex-col justify-center gap-6">
         <h1 className="text-4xl font-bold text-primary sm:text-5xl md:text-left md:text-6xl text-center">
           Hi, I am Tinhinane

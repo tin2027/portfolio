@@ -14,9 +14,9 @@ export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 flex w-full items-center justify-end bg-light/95 px-6 py-2 shadow-sm backdrop-blur md:justify-center">
+    <nav className="sticky top-0 z-50 flex w-full items-center justify-end bg-light/95 px-6 py-3 shadow-sm backdrop-blur md:justify-center">
       {/* Desktop links */}
-      <ul className="hidden gap-10 text-primary font-semibold text-sm md:flex">
+      <ul className="hidden gap-10 text-primary font-semibold text-base md:flex">
         {navLinks.map((link) => (
           <li key={link.name}>
             <a
