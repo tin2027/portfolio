@@ -10,7 +10,7 @@ export default function Hero() {
         <p className="text-lg text-slate-300 md:text-left md:text-2xl text-center">
           A junior developer who loves building clean functional web apps
         </p>
-        <div className="flex flex-wrap justify-center gap-4 md:justify-start">
+        {/* <div className="flex flex-wrap justify-center gap-4 md:justify-start">
           <a
             href="/cv"
             target="_blank"
@@ -26,7 +26,7 @@ export default function Hero() {
           >
             Download CV
           </a>
-        </div>
+        </div> */}
       </div>
       <div className="w-56 shrink-0 sm:w-64 md:w-80 lg:w-96">
         <Image
