@@ -22,7 +22,7 @@ export default function Contact() {
           href="mailto:cheballahtinhinane@gmail.com"
           className="btn-primary"
         >
-          Email me
+          cheballahtinhinane@gmail.com
         </a>
         <a
           href="tel:+213780136232"
