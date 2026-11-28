@@ -4,9 +4,9 @@ const projects = [
   {
     image: "kunuz.png",
     title: "Kunuz",
-    link: "https://kunuz.com",
+    // link: "https://kunuz.com",
     description:
-      "A community platform for sharing stories and knowledge about Algerian heritage and culture.",
+      "A communitty platform dedicated to algerian culture and heritage enthusiasts, where they can share posts about their experiences and knowledge.",
   },
   {
     image: "promptopia.png",
@@ -15,12 +15,12 @@ const projects = [
     description:
       "A full-stack app for discovering, creating, and sharing AI prompts, with Google sign-in and searchable profiles.",
   },
-  {
-    image: "hidaya.jpeg",
-    title: "Hidaya store",
-    description:
-      "An online storefront designed to make browsing and discovering products simple.",
-  },
+  // {
+  //   image: "hidaya.jpeg",
+  //   title: "Hidaya store",
+  //   description:
+  //     "An online storefront designed to make browsing and discovering products simple.",
+  // },
 ];
 export default function Projects() {
   return (
